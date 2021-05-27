@@ -1,15 +1,14 @@
 package com.example.realtimechatapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.FileUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.realtimechatapp.Models.Users;
 import com.example.realtimechatapp.databinding.ActivitySignInBinding;
@@ -91,6 +90,7 @@ public class SignInActivity extends AppCompatActivity {
         binding.btnGoogle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 signIn();
             }
         });

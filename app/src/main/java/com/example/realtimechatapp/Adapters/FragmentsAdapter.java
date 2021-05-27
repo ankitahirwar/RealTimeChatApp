@@ -6,6 +6,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.realtimechatapp.Fragments.ChatsFragment;
+import com.example.realtimechatapp.Fragments.FeedbackFragment;
+import com.example.realtimechatapp.Fragments.DeveloperFragment;
 
 public class FragmentsAdapter extends FragmentPagerAdapter {
     public FragmentsAdapter(@NonNull FragmentManager fm) {
@@ -18,7 +20,11 @@ public class FragmentsAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
 
         switch (position) {
-            default : return new ChatsFragment();
+            case 0: return new ChatsFragment();
+            case 1: return new DeveloperFragment();
+            case 2: return new FeedbackFragment();
+
+            default:return new ChatsFragment();
 
         }
     }
@@ -26,7 +32,7 @@ public class FragmentsAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
 
-        return 0;
+        return 3;
     }
 
     @NonNull
@@ -36,6 +42,14 @@ public class FragmentsAdapter extends FragmentPagerAdapter {
         title = null;
         if (position==0){
             title = "CHATS";
+        }
+
+        if (position==1){
+            title = "Developer";
+        }
+
+        if (position==2){
+            title = "Feedback";
         }
 
         return title;

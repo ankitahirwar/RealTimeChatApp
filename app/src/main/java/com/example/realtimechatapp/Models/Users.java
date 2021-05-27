@@ -13,7 +13,16 @@ public class Users {
 
     public Users(){}
 
-     // SignUpnConstructor
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+
+    // SignUpnConstructor
 
     public Users(String userName, String mail,String password) {
         this.userName = userName;
@@ -61,14 +70,7 @@ public class Users {
         this.password = password;
     }
 
-    public static String getuserId(String userId) {
-        return userId;
-    }
 
-    public void setUserId(String userId) {
-
-        this.userId = userId;
-    }
 
     public String getLastMessage() {
 
